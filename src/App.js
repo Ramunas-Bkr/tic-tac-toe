@@ -9,10 +9,19 @@ function App() {
   const [isX, setIsX] = useState(false);
 
   const onSquareClick = (index) => {
-    let strings = Array.from(gameState);
-    strings[index] = isX ? "X" : "O";
-    setGameState(strings);
-    setIsX(!isX)
+    if (!gameState[index]) {
+      let strings = Array.from(gameState);
+      strings[index] = isX ? "X" : "O";
+      setGameState(strings);
+      setIsX(!isX);
+    } else {
+      return null;
+    }
+  }
+
+  const clearGame = () => {
+    setGameState(initialState);
+    setIsX(false);
   }
 
   useEffect(() => {
@@ -62,7 +71,7 @@ function App() {
         <Square className="b-right" state={gameState[7]} onClick={() => onSquareClick(7)} />
         <Square state={gameState[8]} onClick={() => onSquareClick(8)} />
       </div>
-      <button className="clear-button" onClick={() => setGameState(initialState)}>Clear Game</button>
+      <button className="clear-button" onClick={() => clearGame()}>Clear Game</button>
     </div>
   );
 }
