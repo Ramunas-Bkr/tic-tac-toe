@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+<b>Demo app page: https://ramunas-bkr.github.io/tic-tac-toe/</b>
+
+
 ## Available Scripts
 
 In the project directory, you can run:
