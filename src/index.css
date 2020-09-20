@@ -71,8 +71,19 @@ code {
 }
 
 .clear-button {
+    background-color: #131A28;
+    color: #fff;
     width: max-content;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 15px 30px;
     margin: 40px auto 10px auto;
+    transition: all 0.5s;
+}
+
+.clear-button:hover {
+    background-color: #0f101b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 
